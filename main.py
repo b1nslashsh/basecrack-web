@@ -54,7 +54,7 @@ def adder_page():
 
             </div> 
             <footer> 
-            <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
+            <ul> <a href="https://github.com/b1nslashsh/basecrack-web" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
             </ul></footer> 
             </body>
@@ -124,7 +124,7 @@ def adder_page():
                 </div>
                 <p>This is built using mufeedvh's <a href="https://github.com/mufeedvh/basecrack" target="_blank" >basecrack</a> and its API support ; Feel free to leave a 🌟 there <p>
                 <footer> 
-            <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
+            <ul> <a href="https://github.com/b1nslashsh/basecrack-web" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
             </ul></footer> 
             </body>
@@ -195,7 +195,7 @@ def fileoutput(result1, data,basefile1):
                 <p><a href="/">Click here to decode Another one </a>
             </div> 
             <footer> 
-            <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
+            <ul> <a href="https://github.com/b1nslashsh/basecrack-web" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             </ul> </footer>  
             </body>
             </html>
