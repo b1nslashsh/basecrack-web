@@ -1,5 +1,5 @@
 # basecrack-web
-a web ui for ![basecrack](https://github.com/mufeedvh/basecrack)
+a web ui for [basecrack](https://github.com/mufeedvh/basecrack)
 # Installation
 
 ```
