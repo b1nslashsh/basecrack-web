@@ -11,3 +11,4 @@ pybase100
 exifread
 opencv-python
 pytesseract
+flask
