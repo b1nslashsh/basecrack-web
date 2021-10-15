@@ -122,7 +122,7 @@ def adder_page():
                 </aside>
                 </here>
                 </div>
-                <p>This is build useing mufeedvh's <a href="https://github.com/mufeedvh/basecrack" target="_blank" >basecrack</a> and its API support ; Feel free to leave a 🌟 there <p>
+                <p>This is built using mufeedvh's <a href="https://github.com/mufeedvh/basecrack" target="_blank" >basecrack</a> and its API support ; Feel free to leave a 🌟 there <p>
                 <footer> 
             <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
