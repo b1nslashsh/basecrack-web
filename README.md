@@ -15,3 +15,4 @@ a web ui for [basecrack](https://github.com/mufeedvh/basecrack)
 
 + Support for OCR
 + Recursive Decoding
++ export decoded base result as file 
