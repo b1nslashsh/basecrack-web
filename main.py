@@ -1,7 +1,7 @@
-from flask import Flask, request ,escape 
+from flask import Flask, request ,escape
 import sys,basecrack,exifread
 
-app = Flask(__name__,static_folder='static/')
+app = Flask(__name__,static_folder='/')
 app.config["DEBUG"] = True
 
 @app.route("/", methods=["GET","POST"])
@@ -22,9 +22,9 @@ def adder_page():
             exif = escape(str(request.form["exif"]))
             print(exif)
         except:
-            errortext = "<p> <b> Error </b> : Please try anything to decode</p>\n"
+            errortext = "<p> <b><i> Error </i></b> : Please try anything to decode</p>\n"
         if type1 == "text" and base == "" :
-            errortext = "<p> <b> Error </b> : Please try anything to decode</p>\n"
+            errortext = "<p> <b> <i>Error </i></b> : Please try anything to decode</p>\n"
 
         elif type1 == "text" : 
             result =  basecrack.BaseCrack().decode(base)
@@ -54,14 +54,14 @@ def adder_page():
 
             </div> 
             <footer> 
-            <ul> <a href="https://github.com/b1nslashsh/basecrack-web" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
+            <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
             </ul></footer> 
             </body>
             </html>
                 '''.format(encode = base, decode = escape(result[0]),scheme = result[1])
             else:
-                errortext = "<p><b> Error </b>: '{}' Is not a valid base</p>\n".format(base)
+                errortext = "<p><b> <i>Error</i> </b>: '{}' Is not a valid base</p>\n".format(base)
         elif type1 == "exif":
             result2,data2 = output(exif)
             return fileoutput(result2,data2,exif)
@@ -71,7 +71,7 @@ def adder_page():
                 result1[1]
                 data[0]
             except Exception:
-                errortext = "<p> <b> Error </b> : Please select a valid base file to decode </p>\n"
+                errortext = "<p> <b> <i>Error </i></b> : Please select a valid base file to decode </p>\n"
             else :
                return fileoutput(result1,data,basefile1)
 
@@ -172,9 +172,9 @@ def fileoutput(result1, data,basefile1):
     for i in range(len(result1)):
         if(result1[i] is not None):
             result += '''
-                <p><b>Encoded From : </b> {encode1} </p>
-                <p><b>Decoded Base   : </b>"{decode1}" </p>
-                <p><b>Encoded Scheme : </b>"{scheme}" </p>
+                <p>Encoded From : {encode1} </p>
+                <p>Decoded Base   : "{decode1}" </p>
+                <p>Encoded Scheme : "{scheme}" </p>
                 <br>
             '''.format(encode1=escape(data[i]), decode1=escape(result1[i][0]), scheme=result1[i][1])
 
@@ -195,7 +195,7 @@ def fileoutput(result1, data,basefile1):
                 <p><a href="/">Click here to decode Another one </a>
             </div> 
             <footer> 
-            <ul> <a href="https://github.com/b1nslashsh/basecrack-web" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
+            <ul> <a href="https://github.com/b1nslashsh" target="_blank" ><img src="/static/github.png" style="width:25px;height:25px;"></a> 
             </ul> </footer>  
             </body>
             </html>
