@@ -1,7 +1,7 @@
 from flask import Flask, request ,escape
 import sys,basecrack,exifread
 
-app = Flask(__name__,static_folder='/')
+app = Flask(__name__,static_folder='static/')
 app.config["DEBUG"] = True
 
 @app.route("/", methods=["GET","POST"])
