@@ -17,10 +17,6 @@ OR
 ```
   $ python3 main.py 
 ```
-# Screenshots
-
-![image](https://user-images.githubusercontent.com/36979660/138229739-2718b60f-7c64-4080-bb3a-78bfea6677e7.png)
-
 
 # Todo
 
