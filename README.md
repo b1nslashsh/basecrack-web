@@ -6,6 +6,10 @@ a web ui for [basecrack](https://github.com/mufeedvh/basecrack)
   $ git clone https://github.com/b1nslashsh/basecrack-web
   $ pip3 install -r requirements.txt
 ```
+OR 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/b1nslashsh/basecrack-web)
+
 # Usage
 
 ```
