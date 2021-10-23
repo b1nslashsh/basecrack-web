@@ -138,7 +138,7 @@ def adder_page():
                     <li>Ascii85</li>
                     <li>Base91</li>
                     <li>Base92</li>
-                    <li>Base100 (#14)</li>
+                    <li>Base100</li>
                 </ul>
                 </aside>
                 </here>
