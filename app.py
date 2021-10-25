@@ -233,7 +233,6 @@ def page404(e):
     return ''' 
 <html>
    <head>
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <meta http-equiv = "refresh" content="3 ; /" />
    </head>
    <body>
