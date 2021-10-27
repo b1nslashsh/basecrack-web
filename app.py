@@ -2,6 +2,7 @@ from flask import Flask, request ,escape
 import sys,basecrack,exifread,os
 from werkzeug.utils import secure_filename
 
+
 app = Flask(__name__,static_folder='static/')
 app.config["DEBUG"] = True
 
@@ -15,7 +16,7 @@ home = '''<html>
         <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
         </head>
     <title>Basecrack-web</title>
-            <body>
+            <body style="background-color:Lavender;">
             <script src="/static/test.js"></script>
             <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
             <link rel= "stylesheet" type= "text/css" href="/static/main.css">
@@ -28,18 +29,18 @@ home = '''<html>
                 <script type="text/javascript"></script>
                 
                 <form method="post" action="." enctype="multipart/form-data"> 
-                <p><input type="radio" name="type1" value="text" id="text" style="display:none;" >From text : <textarea type="text" name="base" onclick="check();" class="fixed"></textarea>  <input type="reset" value="Reset"></p>   
+                <p><input type="radio" name="type1" value="text" id="text" style="display:none;" >From text : <textarea type="text" name="base" onclick="check();" class="fixed" style="background-color:Lavender;"></textarea>  <input type="reset" value="Reset"></p>   
                     <p>[*] OR upload encoded base from file :</p>                           
-                <p><input type="radio" name="type1" value="file" id="file" style="display:none;" >From file <input onchange="validateSize(this)" type="file" name="basefile1" onclick="uncheck();"/><small>(NB:5 MB max for all files)</small></p>  
+                <p><input type="radio" name="type1" value="file" id="file" style="display:none;" >From file <input onchange="validateSize(this)" type="file" name="basefile1" onclick="uncheck();"/><br></p><small>(NB:5 MB max for all files)</small>
                    <p>[*] OR From exif data! :</p>
                     <p><input type="radio" name="type1" value="exif" id="exif" style="display:none;" >From image <input type="file" onchange="validateSize(this)" name="exif" onclick="exifcheck();"  accept="image/*"/></p>
                     <p><input type="submit" value="Upload & Decode!" /></p>
                 </form>
                 
                 </main>
-                <here>
                 <aside>
-                <p><b>Supported Encoding Schemes : </b></p>
+                <details>
+                <summary><b>Supported Encoding Schemes : </b></summary>
                 <ul class=no>
                     <li>Base16</li>
                     <li>Base32</li>
@@ -55,7 +56,7 @@ home = '''<html>
                     <li>Base100</li>
                 </ul>
                 </aside>
-                </here>
+                </details>
                 </div>
                 <p>This is built using mufeedvh's <a href="https://github.com/mufeedvh/basecrack" target="_blank" >basecrack</a> and its API support ; Feel free to leave a 🌟 there <p>
                 <footer> 
@@ -103,13 +104,13 @@ def adder_page():
             <link rel= "stylesheet" type= "text/css" href="/static/main.css">
             <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
             </head> 
-            <body> 
+            <body style="background-color:Lavender;">
             <div class="container"> 
 
                     <p><b>Encoded Base   : </b>"{encode}" </p>
                     <div style="overflow: hidden;">
                     <p style = "float : left;"> <b>Decoded Base  :</b>&nbsp;</p>
-                    <textarea style = "float : center; "id="result" value="assa" class="result">{decode} </textarea>
+                    <textarea style = "float : center; background-color:Lavender;""id="result" value="assa" class="result">{decode} </textarea>
                     <button id="this" onclick="toclip('result');"><code>Copy to clipboard</code></button>
                     </div>
                     <p><b>Encoded Scheme : </b>"{scheme}" </p>
@@ -118,7 +119,7 @@ def adder_page():
             </div> 
             <footer> 
             <ul> <a href="https://github.com/b1nslashsh" target="_blank"><img src="/static/github.png" style="width:25px;height:25px;"></a> 
-            <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
+            <a href=mailto:admin@b1nslashsh.tech target="_blank" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report an issue / Feedback </a>
             </ul></footer> 
             </body>
             </html>
@@ -206,7 +207,7 @@ def fileoutput(result1, data,filename):
                 <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
                 <link rel= "stylesheet" type= "text/css" href="/static/main.css">
                 </head> 
-                <body> 
+                <body style="background-color:Lavender;"> 
                 <div class="container"> 
                     <p><b>Decoding Base Data From : </b>{basefile}</p>
                     {result}
@@ -233,6 +234,7 @@ def page404(e):
     return ''' 
 <html>
    <head>
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <meta http-equiv = "refresh" content="3 ; /" />
    </head>
    <body>
